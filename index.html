@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cristine Juanitez</title>
+    <style>
+        body {
+            background-image: url('bb.jpg'); /* Vintage grid background image */
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-size: auto; /* Adjust as needed */
+            color: #463f3a; /* Brownish text color */
+        }
+        .container {
+            max-width: 400px; /* Adjusted for portrait layout */
+            margin: 50px auto;
+            background-color: #f6f1e5; /* Off-white background color */
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        .intro {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .profile-pic {
+            display: block;
+            margin: 20px auto; /* Center align the image horizontally */
+            margin-bottom: 20px;
+            border-radius: 50%; /* Make it a circle */
+            border: 5px solid #8b4513; /* Brown border color */
+            width: 200px; /* Set width to 200px */
+            height: 200px; /* Set height to 200px */
+            object-fit: cover; /* Maintain aspect ratio and cover the entire area */
+        }
+        .profile-info {
+            overflow: hidden;
+            text-align: center; /* Align center */
+        }
+        .profile-info h1 {
+            font-family: 'Dancing Script', cursive; /* Vintage calligraphy font */
+            font-size: 32px; /* Adjust font size as needed */
+            color: #8b4513; /* Brown text color */
+            margin-bottom: 10px;
+        }
+        .profile-info p {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .links {
+            margin-top: 20px;
+            text-align: center; /* Center align links */
+        }
+        .links a {
+            display: inline-block;
+            margin-right: 10px;
+            color: #8b4513; /* Brown text color */
+            text-decoration: none;
+            padding: 10px 20px; /* Add padding to make it look like a button */
+            background-color: #f6f1e5; /* Off-white button color */
+            border-radius: 5px; /* Rounded corners */
+            font-weight: bold;
+        }
+        .links a:hover {
+            background-color: #6e361d; /* Darker brown on hover */
+        }
+        .vintage-heading {
+            font-family: 'Dancing Script', cursive; /* Vintage calligraphy font */
+            font-size: 32px; /* Adjust font size as needed */
+            color: #8b4513; /* Brown text color */
+            text-align: center;
+        }
+        .welcome-message {
+            text-align: center;
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+        .connect-text {
+            font-family: 'Dancing Script', cursive; /* Vintage calligraphy font */
+            font-size: 24px; /* Adjust font size as needed */
+            color: #8b4513; /* Brown text color */
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .additional-info {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .additional-info h3 {
+            font-family: 'Dancing Script', cursive; /* Vintage calligraphy font */
+            font-size: 24px; /* Adjust font size as needed */
+            color: #8b4513; /* Brown text color */
+            margin-bottom: 10px;
+        }
+        .additional-info p {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .life-goals, .favorite, .playlist { /* Apply the same styles to .life-goals, .favorite, and .playlist */
+            margin-top: 30px;
+            text-align: center;
+        }
+        .life-goals h3, .favorite h3, .playlist h3 { /* Apply the same styles to .life-goals h3, .favorite h3, and .playlist h3 */
+            font-family: 'Dancing Script', cursive; /* Vintage calligraphy font */
+            font-size: 24px; /* Adjust font size as needed */
+            color: #8b4513; /* Brown text color */
+            margin-bottom: 10px;
+        }
+        .life-goals ul, .favorite ul, .playlist ul { /* Apply the same styles to .life-goals ul, .favorite ul, and .playlist ul */
+            list-style: none;
+            margin-left: 0;
+            padding-left: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .life-goals ul li, .favorite ul li, .playlist ul li { /* Apply the same styles to .life-goals ul li, .favorite ul li, and .playlist ul li */
+            text-align: center;
+            width: calc(33.33% - 20px);
+            margin-bottom: 20px;
+        }
+        .life-goals ul li img, .favorite ul li img, .playlist ul li img { /* Apply the same styles to .life-goals ul li img, .favorite ul li img, and .playlist ul li img */
+            display: block;
+            margin: 0 auto 10px;
+            border-radius: 10px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+        }
+        .video-container { /* Styles for the video container */
+            width: 200px; /* Adjust the width as needed */
+            height: 200px; /* Adjust the height as needed */
+            margin: 0 auto; /* Center align horizontally */
+            border-radius: 20px; /* Adjust border radius for the soft edge */
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Optional: Add a shadow effect */
+        }
+        .video-container video { /* Styles for the video element */
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ensure the video fills the container */
+        }
+        .husbands {
+            margin-top: 30px;
+            text-align: center;
+        }
+        .husbands h3 {
+            font-family: 'Dancing Script', cursive; /* Vintage calligraphy font */
+            font-size: 24px; /* Adjust font size as needed */
+            color: #8b4513; /* Brown text color */
+            margin-bottom: 10px;
+        }
+        .husbands ul {
+            list-style: none;
+            margin-left: 0;
+            padding-left: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .husbands ul li {
+            text-align: center;
+            width: calc(50% - 20px);
+            margin-bottom: 20px;
+        }
+        .husbands ul li img {
+            display: block;
+            margin: 0 auto 10px;
+            border-radius: 10px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="vintage-heading">hi, this is me!</h1>
+        <div class="profile-info">
+            <img src="https://i.pinimg.com/originals/96/96/c7/9696c7724b9fdadc8a153bb92941ca0f.jpg" alt="Profile Picture" class="profile-pic">
+            <h3>Cristine Yguinto Juanitez</h3>
+            <p>anxious optimist | temporarily motivated</p>
+            <br>i am <u>19 years old</u>
+            <br>i am <u>leo</u>
+            <br>i am <u>INFP-T</u>
+        </div>
+        <div class="favorite">
+            <h3>favorite</h3>
+            <!-- Video section -->
+            <div class="video-container">
+                <video controls>
+                    <source src="flow.mp4" type="video/mp4">
+                    <!-- Add additional source elements for different video formats if needed -->
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <p>"i want so much that is not here, and i do not know where to go"</p>
+            <p><i>-Charles Bukowski</i>
+        </div>
+        <div class="life-goals">
+            <h3>life goals</h3>
+            <ul>
+                <li>
+                    <img src="grad.jpg" alt="Graduation" width="80">
+                    <div>to graduate</div>
+                </li>
+                <li>
+                    <img src="rich.jpg" alt="Rich" width="80">
+                    <div>be rich</div>
+                </li>
+                <li>
+                    <img src="swtiz.jpg" alt="Travel" width="80">
+                    <div>travel</div>
+                </li>
+            </ul>
+        </div>
+        <div class="section-divider"></div> <!-- Divider between sections -->
+        <div class="playlist">
+            <h3>playlist🎵</h3>
+            <ul style="text-align: left;">
+                <li><a href="Olivia Rodrigo - making the bed (Lyrics).mp3" style="color: #8b4513;">making the bed by olivia rodrigo</a></li>
+                <li><a href="Taylor Swift - Maroon (Official Lyric Video).mp3" style="color: #8b4513;">maroon by taylor swift</a></li>
+                <li><a href="Sabrina Carpenter - emails i can't send (Official Audio).mp3" style="color: #8b4513;">emails i can't send by sabrina carpenter</a></li>
+            </ul>
+        </div>
+        <div class="husbands">
+            <h3>meet my husbands</h3>
+            <ul>
+                <li>
+                    <div class="square-img-container">
+                        <img src="nam.jpg" alt="yeobo" width="160">
+                    </div>
+                </li>
+                <li>
+                    <div class="square-img-container">
+                        <img src="hae.jpg" alt="namja chingu" width="160">
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="profile-info">
+            <p>if you want to connect, just drop me a message on:</p>
+            <div class="links">
+                <a href="https://www.facebook.com/cristine.juanitez/">Facebook</a>
+                <a href="https://www.instagram.com/cristineshi1/">Instagram</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
